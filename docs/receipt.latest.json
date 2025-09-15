@@ -1,0 +1,10 @@
+{
+  "claim": "Hello from Pages",
+  "because": [],
+  "but": [],
+  "so": "Static demo OK",
+  "telem": { "delta_scale": 0.02 },
+  "threshold": 0.03,
+  "model": "demo",
+  "attrs": {}
+}
