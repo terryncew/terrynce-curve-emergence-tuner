@@ -1,10 +1,10 @@
 {
-  "claim": "Hello from Pages",
-  "because": [],
-  "but": [],
-  "so": "Static demo OK",
-  "telem": { "delta_scale": 0.02 },
+  "claim": "SPY likely up tomorrow",
+  "because": ["Reflex loop coherence stayed within band", "30d minute context"],
+  "but": ["Scale drift \u0394_scale = 0.028 (min\u2194hour)"],
+  "so": "Within 3% tolerance \u2014 recheck at close",
+  "telem": { "delta_scale": 0.028 },
   "threshold": 0.03,
-  "model": "demo",
-  "attrs": {}
+  "model": "coherence/reflex-loop",
+  "attrs": { "cadence": "day" }
 }
