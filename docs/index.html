@@ -1,4 +1,26 @@
 <!doctype html><meta charset="utf-8">
-<title>Receipt</title>
-<script type="module" src="https://rawcdn.githack.com/terryncew/openline-core/main/receipts-kit/openline-card.js"></script>
-<openline-card mode="compact" src="./receipt.latest.json"></openline-card>
+<title>OpenLine Hub</title>
+<script type="module" src="https://cdn.jsdelivr.net/gh/terryncew/openline-core@main/receipts-kit/openline-card.js"></script>
+
+<h2>OpenLine Hub</h2>
+<p>Live receipts aggregated from your repos:</p>
+
+<div id="cards"></div>
+
+<script>
+const repos = [
+  "COLE-Coherence-Layer-Engine-",
+  "dynamic-sentience-maps",
+  "terrynce-curve-emergence-tuner",
+  "tuner-engine-or-ContentTuner"
+];
+
+const cards = document.getElementById("cards");
+
+repos.forEach(r => {
+  const url = `https://terryncew.github.io/${r}/receipt.latest.json`;
+  const div = document.createElement("div");
+  div.innerHTML = `<openline-card mode="compact" src="${url}"></openline-card>`;
+  cards.appendChild(div);
+});
+</script>
