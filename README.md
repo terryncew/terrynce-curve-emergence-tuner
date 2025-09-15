@@ -1,3 +1,7 @@
+![Schema check](https://github.com/terryncew/openline-core/actions/workflows/validate.yml/badge.svg)
+
+**Live hub:** https://terryncew.github.io/openline-hub/
+
 # 🛡️ Emergence Guard
 
 **Real-time safety monitoring for AI systems using dual κ/ε metrics**
