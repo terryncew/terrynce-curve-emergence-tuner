@@ -1,0 +1,72 @@
+name: TERRYNCE-KILAUEA-001 Held-Out Replay Phase A
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  heldout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: TERRYNCE-KILAUEA-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: TERRYNCE-KILAUEA-001/pyproject.toml
+      - name: Install harness
+        run: pip install -e '.[dev]'
+      - name: Run frozen-boundary tests
+        run: pytest
+      - name: Acquire and verify published archive
+        run: tk001 acquire | tee artifacts/acquire_holdout_stdout.json
+      - name: Re-enforce real-data preflight
+        run: |
+          tk001 preflight | tee artifacts/preflight_holdout_stdout.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('artifacts/preflight_report.json').read_text())
+          bad=[x for x in r['checks'] if x['status'] in {'FAIL','BLOCKED','REVIEW'}]
+          if bad:
+              print(json.dumps(bad, indent=2))
+              raise SystemExit(2)
+          PY
+      - name: Reproduce frozen cycles 1-29 calibration
+        run: tk001 calibrate-real | tee artifacts/calibration_holdout_stdout.json
+      - name: Open cycles 30-39 and replay frozen models
+        run: tk001 replay-frozen-real | tee artifacts/heldout_phase_a_stdout.json
+      - name: Enforce final-claim boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('artifacts/heldout_phase_a_report.json').read_text())
+          assert r['split']['training_cycles']==[1,29]
+          assert r['split']['holdout_cycles']==[30,39]
+          assert r['models']['published_gnn']['status']=='PENDING_REPRODUCTION'
+          assert r['final_preregistered_verdict']=='WITHHELD_PENDING_PUBLISHED_GNN'
+          print(json.dumps({
+            'status': r['status'],
+            'comparisons': r['comparisons'],
+            'final_verdict': r['final_preregistered_verdict'],
+            'boundary': r['boundary'],
+          }, indent=2))
+          PY
+      - name: Upload held-out receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TERRYNCE-KILAUEA-001-heldout-phase-a
+          path: |
+            TERRYNCE-KILAUEA-001/artifacts/*.json
+            TERRYNCE-KILAUEA-001/artifacts/*.sha256
+            TERRYNCE-KILAUEA-001/artifacts/heldout_phase_a_predictions.csv
+          if-no-files-found: error
+          retention-days: 30

@@ -110,3 +110,54 @@ def load_training_cycles(mat_path: Path, train_n: int = 29, n_cycles: int = 39) 
         channel_names=CHANNEL_NAMES.copy(),
     )
     return cycles, receipt
+
+def load_all_cycles(mat_path: Path, train_n: int = 29, n_cycles: int = 39) -> tuple[list[Cycle], AdapterReceipt]:
+    """Load all 39 chronological cycles after calibration has been frozen.
+
+    Target-unit inference remains training-only: only the first `train_n` targets
+    determine the days-vs-hours multiplier.
+    """
+    z = loadmat(mat_path, variable_names=["X_l", "Y_l"], squeeze_me=False, struct_as_record=False)
+    if "X_l" not in z or "Y_l" not in z:
+        raise ValueError("released MAT file missing X_l or Y_l")
+    xi, x = _select_x_cell(_cells(z["X_l"]), n_cycles)
+    yi, y = _select_y_cell(_cells(z["Y_l"]), n_cycles)
+    durations, unit, mult = _target_hours(y, train_n)
+
+    arr = np.asarray(x, float)
+    arr = arr.reshape((-1, arr.shape[-2], arr.shape[-1]))
+    if arr.shape[1] < 7 or arr.shape[2] != n_cycles:
+        raise ValueError(f"unexpected released X layout after reshape: {arr.shape}")
+
+    cycles: list[Cycle] = []
+    for i in range(n_cycles):
+        dur = float(durations[i])
+        if not np.isfinite(dur) or dur <= 0:
+            raise ValueError(f"cycle {i+1}: invalid duration")
+        n = min(arr.shape[0], int(np.floor(dur / SAMPLE_INTERVAL_HOURS)) + 1)
+        if n < 5:
+            raise ValueError(f"cycle {i+1}: insufficient causal samples")
+        data = arr[:n, :7, i]
+        if not np.isfinite(data).all():
+            raise ValueError(f"cycle {i+1}: non-finite sensor values")
+        t = np.arange(n, dtype=float) * SAMPLE_INTERVAL_HOURS
+        cycles.append(Cycle(
+            cycle_id=f"cycle_{i+1:02d}",
+            time_hours=t,
+            duration_hours=dur,
+            sensors={name: data[:, j].copy() for j, name in enumerate(CHANNEL_NAMES)},
+        ))
+
+    receipt = AdapterReceipt(
+        x_cell_index=xi,
+        x_shape=list(np.asarray(x).shape),
+        y_cell_index=yi,
+        y_shape=list(np.asarray(y).shape),
+        target_unit=unit,
+        target_multiplier_to_hours=mult,
+        sample_interval_hours=SAMPLE_INTERVAL_HOURS,
+        n_cycles_extracted=len(cycles),
+        channel_names=CHANNEL_NAMES.copy(),
+    )
+    return cycles, receipt
+

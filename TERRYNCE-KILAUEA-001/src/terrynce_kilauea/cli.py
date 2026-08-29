@@ -7,6 +7,7 @@ from pathlib import Path
 from .acquire import acquire
 from .canonical import load_csv, validate_cycles
 from .calibration import calibrate_real
+from .frozen_replay import replay_frozen_real
 from .preflight import run_preflight
 from .protocol import load_protocol, repo_root
 from .replay import replay
@@ -20,6 +21,7 @@ def main() -> None:
     a.add_argument("--force", action="store_true")
     sub.add_parser("preflight")
     sub.add_parser("calibrate-real")
+    sub.add_parser("replay-frozen-real")
     v = sub.add_parser("validate")
     v.add_argument("csv", type=Path)
     r = sub.add_parser("replay")
@@ -36,6 +38,8 @@ def main() -> None:
         print(json.dumps(run_preflight(root), indent=2))
     elif args.cmd == "calibrate-real":
         print(json.dumps(calibrate_real(root), indent=2))
+    elif args.cmd == "replay-frozen-real":
+        print(json.dumps(replay_frozen_real(root), indent=2))
     elif args.cmd == "validate":
         proto = load_protocol(root)
         result = validate_cycles(load_csv(args.csv), proto["split"]["n_cycles"])

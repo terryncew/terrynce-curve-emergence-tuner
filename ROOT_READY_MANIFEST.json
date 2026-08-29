@@ -1,210 +1,343 @@
 {
-  "package": "TERRYNCE-KILAUEA-001-frozen-calibration",
+  "experiment_id": "TERRYNCE-KILAUEA-001",
+  "handoff": "HELD_OUT_REPLAY_PHASE_A",
+  "root_ready": true,
+  "validation": "Python syntax checked locally; GitHub Actions runs full pytest and real-data replay.",
   "files": [
     {
       "path": ".github/workflows/terrynce-kilauea-001-calibration.yml",
-      "bytes": 2543,
-      "sha256": "8e6febee969da6bee1d0446e10541c3b746569c483ee6fc8eef8a74fd504ccd9"
+      "sha256": "8e6febee969da6bee1d0446e10541c3b746569c483ee6fc8eef8a74fd504ccd9",
+      "bytes": 2543
+    },
+    {
+      "path": ".github/workflows/terrynce-kilauea-001-heldout-phase-a.yml",
+      "sha256": "1c16affbe47c0f30de0119bb3cca655268b2886e9639fc5581750de5ed9d52c4",
+      "bytes": 2657
     },
     {
       "path": ".github/workflows/terrynce-kilauea-001-real-data.yml",
-      "bytes": 2403,
-      "sha256": "2f6e63fa0c43d55cbbad6d49ca8592536d413af7bfca7b31dd3c9c44e923db14"
+      "sha256": "2f6e63fa0c43d55cbbad6d49ca8592536d413af7bfca7b31dd3c9c44e923db14",
+      "bytes": 2403
     },
     {
       "path": ".github/workflows/terrynce-kilauea-001.yml",
-      "bytes": 721,
-      "sha256": "da43e152cc08286904565e45d711101d2d9b04db9f2ef05ee827787920695c05"
+      "sha256": "da43e152cc08286904565e45d711101d2d9b04db9f2ef05ee827787920695c05",
+      "bytes": 721
     },
     {
       "path": "TERRYNCE-KILAUEA-001/.gitignore",
-      "bytes": 181,
-      "sha256": "7dc44e347d2db0c6cae8b00f38e2844f32ee856b22bb7695fb941a763866518c"
-    },
-    {
-      "path": "TERRYNCE-KILAUEA-001/BUILD_MANIFEST.json",
-      "bytes": 6069,
-      "sha256": "de74a8679d60699f37f00ebec3833fb8e12fc13c61a1c2a3e3fa04173630b815"
+      "sha256": "7dc44e347d2db0c6cae8b00f38e2844f32ee856b22bb7695fb941a763866518c",
+      "bytes": 181
     },
     {
       "path": "TERRYNCE-KILAUEA-001/CITATIONS.md",
-      "bytes": 519,
-      "sha256": "0cca21a95711d0698c84898dd094b22eed63da239fc9abe6c983393166d04afe"
+      "sha256": "0cca21a95711d0698c84898dd094b22eed63da239fc9abe6c983393166d04afe",
+      "bytes": 519
     },
     {
       "path": "TERRYNCE-KILAUEA-001/PREREGISTRATION.md",
-      "bytes": 4283,
-      "sha256": "f474a151d6e673b3ddf2f4f23b403b6d138a6fe29642b7a4303a93eb4af11af8"
+      "sha256": "f474a151d6e673b3ddf2f4f23b403b6d138a6fe29642b7a4303a93eb4af11af8",
+      "bytes": 4283
     },
     {
       "path": "TERRYNCE-KILAUEA-001/README.md",
-      "bytes": 2960,
-      "sha256": "4f14df3dd30bf1cc04067d730a5fa8aec9d2f14fdcec6e9d3784f939e1bf840c"
+      "sha256": "4f14df3dd30bf1cc04067d730a5fa8aec9d2f14fdcec6e9d3784f939e1bf840c",
+      "bytes": 2960
     },
     {
       "path": "TERRYNCE-KILAUEA-001/STATUS.md",
-      "bytes": 3101,
-      "sha256": "5c569f9926203dcd346c652af2884ab4c72ea834ca03773731cfab6b3466146e"
+      "sha256": "6e0689d5e29a70cbf361ac63c8e88e5a9f68e92b30dcd107fadf4369eb395102",
+      "bytes": 3574
     },
     {
       "path": "TERRYNCE-KILAUEA-001/artifacts/.gitkeep",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "TERRYNCE-KILAUEA-001/artifacts/holdout_predictions.csv",
-      "bytes": 208091,
-      "sha256": "4912ebfe3940c4de296d2f6b98a645cbec697e74b55448200293f3d90e161c49"
-    },
-    {
-      "path": "TERRYNCE-KILAUEA-001/artifacts/replay_report.json",
-      "bytes": 3807,
-      "sha256": "c26237ed8d08dbd09bad0c596867a77db4028b288fefe34bb891ed388d59c832"
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
     },
     {
       "path": "TERRYNCE-KILAUEA-001/config/frozen_protocol.json",
-      "bytes": 1078,
-      "sha256": "121fc1bb919d19c103c762d60414e4c4533def0d34a0961101c51d0ef7533038"
+      "sha256": "121fc1bb919d19c103c762d60414e4c4533def0d34a0961101c51d0ef7533038",
+      "bytes": 1078
     },
     {
       "path": "TERRYNCE-KILAUEA-001/config/sources.lock.json",
-      "bytes": 1036,
-      "sha256": "75e1756224456274c38bc4a697b2b30ce32c5b25cd3652f91a20fd67e75ad1be"
+      "sha256": "75e1756224456274c38bc4a697b2b30ce32c5b25cd3652f91a20fd67e75ad1be",
+      "bytes": 1036
     },
     {
       "path": "TERRYNCE-KILAUEA-001/data/processed/.gitkeep",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
     },
     {
       "path": "TERRYNCE-KILAUEA-001/data/raw/.gitkeep",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
     },
     {
       "path": "TERRYNCE-KILAUEA-001/pyproject.toml",
-      "bytes": 581,
-      "sha256": "d85e48c856077d4db4a36ffa4fae975d7028f12ebf3bb605a43310224f496c75"
+      "sha256": "d85e48c856077d4db4a36ffa4fae975d7028f12ebf3bb605a43310224f496c75",
+      "bytes": 581
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__init__.py",
-      "bytes": 22,
-      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+      "bytes": 22
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/__init__.cpython-313.pyc",
+      "sha256": "8adbb8ef4e13fc0add4badc26c30252d7950e4eb2e709b9adc9dc0aba1ff909d",
+      "bytes": 204
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/acquire.cpython-313.pyc",
+      "sha256": "e9d214707e53f623831870ac9a0c21c39992b07f7b01407dcef62c25bae3e73d",
+      "bytes": 3592
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/author_schema.cpython-313.pyc",
+      "sha256": "3641c55575f66eca8081f47d268f7dd92df0e75eb598fe3cc0adc378f8360124",
+      "bytes": 4807
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/baselines.cpython-313.pyc",
+      "sha256": "8db97a66ca22e9d6e5c4f47d6431d90c3d72fc9633701298d62c6c51d44b0d52",
+      "bytes": 3189
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/calibration.cpython-313.pyc",
+      "sha256": "71b78851701770ad433244cf2eaaf73ff998af01de495d474bc9d4dc667e66e1",
+      "bytes": 5696
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/canonical.cpython-313.pyc",
+      "sha256": "46b66bc8d723acadbd664052d57f60d5cd3792e97090a2456b51a5a8e4d17a93",
+      "bytes": 5500
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/cli.cpython-313.pyc",
+      "sha256": "d61171c97ac30a91ae38b82b51d074b23420aef936b77983d3defad527071958",
+      "bytes": 3519
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/code_scan.cpython-313.pyc",
+      "sha256": "a401a049439582826ac12f35d2b408d8e5a3c0e6baa7d42628f32e8e7911bdc4",
+      "bytes": 2936
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/frozen_replay.cpython-313.pyc",
+      "sha256": "fa5e60060ba58e45916c3f98fa3cfeeaf65e08d5d9d884d35216366e1e3d0e06",
+      "bytes": 8635
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/hashing.cpython-313.pyc",
+      "sha256": "c2a7ba4192ea2db0886d33e7c7a1c430421a1ec75c32c24643bebdf7c601a2ed",
+      "bytes": 934
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/mat_inventory.cpython-313.pyc",
+      "sha256": "b89dd3306d5ad9cb8e730c9a3ede74b7c0ae94f978e783c041b8bbeb787ea208",
+      "bytes": 7724
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/preflight.cpython-313.pyc",
+      "sha256": "2cbc9be7792f6db8e0781c5e4b578914985c3a35f02cf9d10a2df84fe2edd19b",
+      "bytes": 5860
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/protocol.cpython-313.pyc",
+      "sha256": "dea17e49ad0fd507365c2840d1a72fab55824def2e01e1f4acb898f1d95bd192",
+      "bytes": 1574
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/realdata.cpython-313.pyc",
+      "sha256": "77c830d7de0b735b0c65bda90aa1abf7d3a5e27ecdc053dcc488db9eb2d6eced",
+      "bytes": 9547
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/replay.cpython-313.pyc",
+      "sha256": "bd0006affbaebc5c92a3f8bf44aa2b1a9165cbd3af333276bf330873999fef34",
+      "bytes": 9266
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/scoring.cpython-313.pyc",
+      "sha256": "be177a16b15ba953e9d673c75189e3b3cd6a579f03ccd6fadaf778c91aeb89c4",
+      "bytes": 6701
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/signal.cpython-313.pyc",
+      "sha256": "3ef7caa9c92cfd7069bc2c3874065c9e519bb175d7da2392ede4f40384ab5cbc",
+      "bytes": 9003
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__pycache__/synthetic.cpython-313.pyc",
+      "sha256": "a395476e2230d117cba08c799b44c840edae2152e8c135749b7928d5a7c826e4",
+      "bytes": 2139
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/acquire.py",
-      "bytes": 2036,
-      "sha256": "f198613464b0e46208b609016aa3248ca11ed15f111a904a54df65a3e4807890"
+      "sha256": "f198613464b0e46208b609016aa3248ca11ed15f111a904a54df65a3e4807890",
+      "bytes": 2036
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/author_schema.py",
-      "bytes": 3352,
-      "sha256": "0d682f345f92793c0e8e89f13a4d7e0bb8eebe7ff234f8a27440e987ba5c16d2"
+      "sha256": "0d682f345f92793c0e8e89f13a4d7e0bb8eebe7ff234f8a27440e987ba5c16d2",
+      "bytes": 3352
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/baselines.py",
-      "bytes": 1822,
-      "sha256": "85f460c747eed3e04ea32266d166503e36753ee52351da27bd311dcf2e914703"
+      "sha256": "85f460c747eed3e04ea32266d166503e36753ee52351da27bd311dcf2e914703",
+      "bytes": 1822
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/calibration.py",
-      "bytes": 4183,
-      "sha256": "24c3faec65680654ed68468ea108b2a3eadb14885f58a92806e7ab2e0957a2a8"
+      "sha256": "24c3faec65680654ed68468ea108b2a3eadb14885f58a92806e7ab2e0957a2a8",
+      "bytes": 4183
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/canonical.py",
-      "bytes": 2850,
-      "sha256": "299fb4a3417eca7a898c781599791c228a5c66814203376825d741b8165c66f3"
+      "sha256": "299fb4a3417eca7a898c781599791c228a5c66814203376825d741b8165c66f3",
+      "bytes": 2850
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/cli.py",
-      "bytes": 1776,
-      "sha256": "25b6e410bb4633bf4012e02c26cfd956e79c3142cc77dce069b7c7d3053de2b3"
+      "sha256": "e25b1a92bdb229bbf8a055eea7060c301d78871ccefb1945ef8c67bca4b1d5cb",
+      "bytes": 1968
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/code_scan.py",
-      "bytes": 1402,
-      "sha256": "3868e287ba56b7d80abbd0717caeeda3f1fefd8768ef75c35512da1970520f7d"
+      "sha256": "3868e287ba56b7d80abbd0717caeeda3f1fefd8768ef75c35512da1970520f7d",
+      "bytes": 1402
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/frozen_replay.py",
+      "sha256": "f4c3051f8dadeee736f982115192759ee076a037a93fb86397f1b88dd6802a1d",
+      "bytes": 6165
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/hashing.py",
-      "bytes": 389,
-      "sha256": "ac2e66f4a3e4087e4b8ea0afcbc7a00c78203cd95d2dae0c6547fbd73bcadbd9"
+      "sha256": "ac2e66f4a3e4087e4b8ea0afcbc7a00c78203cd95d2dae0c6547fbd73bcadbd9",
+      "bytes": 389
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/mat_inventory.py",
-      "bytes": 3755,
-      "sha256": "533e47a55529db8f24d61a85b679f45848341c047fb9e0d0533d578db0d3afc4"
+      "sha256": "533e47a55529db8f24d61a85b679f45848341c047fb9e0d0533d578db0d3afc4",
+      "bytes": 3755
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/preflight.py",
-      "bytes": 4271,
-      "sha256": "5ef4bb877d2c3b3f7bb20cc1c9cf2b6bc703be11246a855a2a2eeb2dbd2d1d0a"
+      "sha256": "5ef4bb877d2c3b3f7bb20cc1c9cf2b6bc703be11246a855a2a2eeb2dbd2d1d0a",
+      "bytes": 4271
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/protocol.py",
-      "bytes": 603,
-      "sha256": "fe2b603995258677cbc8ba2def9e1ccfe471e550f26d18b98e26f501536b5dad"
+      "sha256": "fe2b603995258677cbc8ba2def9e1ccfe471e550f26d18b98e26f501536b5dad",
+      "bytes": 603
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/realdata.py",
-      "bytes": 4326,
-      "sha256": "aad9259a3eafa2b21d1005e1a4b01fd8a8b5830bda5b4708eec35cdcce549d24"
+      "sha256": "d0fd108fdb705b4be9273258aaa719e73deb60a339e14d16dd4b7fce811f1832",
+      "bytes": 6454
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/replay.py",
-      "bytes": 7059,
-      "sha256": "e37448df53fd846f46c991c8e2116f3dbf1a901cce82ca4f6f96e85f14fc5499"
+      "sha256": "e37448df53fd846f46c991c8e2116f3dbf1a901cce82ca4f6f96e85f14fc5499",
+      "bytes": 7059
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/scoring.py",
-      "bytes": 3866,
-      "sha256": "9ab9f2bbff22379021ef39d8c3035b6acc527620408e571b8a9280b7b5e89f60"
+      "sha256": "9ab9f2bbff22379021ef39d8c3035b6acc527620408e571b8a9280b7b5e89f60",
+      "bytes": 3866
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/signal.py",
-      "bytes": 4739,
-      "sha256": "3dee3e201e330e3cc5f78de4dbff157f9b3eb9f6d13458f4998206bd8934c9dd"
+      "sha256": "3dee3e201e330e3cc5f78de4dbff157f9b3eb9f6d13458f4998206bd8934c9dd",
+      "bytes": 4739
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/synthetic.py",
-      "bytes": 987,
-      "sha256": "1bafd85afc6771e10bde16198ce9dbd45e33c4778d6344dede0ab6b3189e3680"
+      "sha256": "1bafd85afc6771e10bde16198ce9dbd45e33c4778d6344dede0ab6b3189e3680",
+      "bytes": 987
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_author_schema.cpython-313.pyc",
+      "sha256": "e6c2de8eac424d0045dc4e7274695c4e623f5bf999d4dce326034aab4c108f2b",
+      "bytes": 1653
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_canonical.cpython-313.pyc",
+      "sha256": "4746f5e980ecdbdfa24d39ed69a5f8150f6dc86984aa36226c4061af33e51105",
+      "bytes": 727
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_causality.cpython-313.pyc",
+      "sha256": "2094a9ea70f03f823ece92aea85f05a8f99f6707736b1c64136bf0f72093bb8e",
+      "bytes": 2174
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_frozen_holdout_boundary.cpython-313.pyc",
+      "sha256": "fb9d10c92a314c043a63f90a8da5d1efcf2953fc1f65ef86565f7337a18c0401",
+      "bytes": 1617
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_protocol.cpython-313.pyc",
+      "sha256": "1fb17a37537302d5046f8b716bdf6bd45290eb4ce0a95eedf485cd9db604ffe1",
+      "bytes": 641
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_realdata_calibration.cpython-313.pyc",
+      "sha256": "67fb0eb091faecf3f574fc0ad3c2f4b37612aa627561f35d571f3f6e23fadbcf",
+      "bytes": 2946
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_replay.cpython-313.pyc",
+      "sha256": "d26d04fa958b3190d1bb35218143ad37f2b77816831b960407b2f8aa41189fb9",
+      "bytes": 824
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/__pycache__/test_split_falsifier.cpython-313.pyc",
+      "sha256": "7207d40e1602cc63ce74fa41d25acd3790c2d7d5256eb1a8e92be0ab77b9ffb1",
+      "bytes": 853
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_author_schema.py",
-      "bytes": 783,
-      "sha256": "86686861ce246eb97386b1c3294db2d99de0f0acfdfab53f516e58d1d07e8a9c"
+      "sha256": "86686861ce246eb97386b1c3294db2d99de0f0acfdfab53f516e58d1d07e8a9c",
+      "bytes": 783
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_canonical.py",
-      "bytes": 328,
-      "sha256": "0062047e3cdc6f12097f25b5b6580685d60580ce902ca51fb5180cad8bda372d"
+      "sha256": "0062047e3cdc6f12097f25b5b6580685d60580ce902ca51fb5180cad8bda372d",
+      "bytes": 328
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_causality.py",
-      "bytes": 906,
-      "sha256": "25205a9ce5e66b6df6d111cc943371890d1f9b024fbf3ab9bedf2a002c50f6a3"
+      "sha256": "25205a9ce5e66b6df6d111cc943371890d1f9b024fbf3ab9bedf2a002c50f6a3",
+      "bytes": 906
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_frozen_holdout_boundary.py",
+      "sha256": "3644d72bb832f84febb3524e30d11d0dbf788defcda569568fe12c58e4c59860",
+      "bytes": 854
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_protocol.py",
-      "bytes": 278,
-      "sha256": "04464321eb6a21e27bcbe17f07b2e1188a639297ccd23bf068b6251f6ffe8472"
+      "sha256": "04464321eb6a21e27bcbe17f07b2e1188a639297ccd23bf068b6251f6ffe8472",
+      "bytes": 278
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_realdata_calibration.py",
-      "bytes": 1389,
-      "sha256": "15673a3c2de01f1b4038c6d96d2c55fa9c4b9773f862e42c221a616ee878cc20"
+      "sha256": "15673a3c2de01f1b4038c6d96d2c55fa9c4b9773f862e42c221a616ee878cc20",
+      "bytes": 1389
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_replay.py",
-      "bytes": 433,
-      "sha256": "c02d8df8b3eadcaadafe14e09e8c6397710926de19218ac9f3b0597e9f20591b"
+      "sha256": "c02d8df8b3eadcaadafe14e09e8c6397710926de19218ac9f3b0597e9f20591b",
+      "bytes": 433
     },
     {
       "path": "TERRYNCE-KILAUEA-001/tests/test_split_falsifier.py",
-      "bytes": 322,
-      "sha256": "a3893b294783805951271001e0561e2d7b46578ec7de7170a3a91d01a610fe19"
+      "sha256": "a3893b294783805951271001e0561e2d7b46578ec7de7170a3a91d01a610fe19",
+      "bytes": 322
     }
   ]
 }
