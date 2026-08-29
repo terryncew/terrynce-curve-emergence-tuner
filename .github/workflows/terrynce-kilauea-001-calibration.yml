@@ -1,0 +1,70 @@
+name: TERRYNCE-KILAUEA-001 Frozen Calibration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: TERRYNCE-KILAUEA-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: TERRYNCE-KILAUEA-001/pyproject.toml
+      - name: Install harness
+        run: pip install -e '.[dev]'
+      - name: Run tests including holdout-mutation falsifier
+        run: pytest
+      - name: Acquire and verify published archive
+        run: tk001 acquire | tee artifacts/acquire_calibration_stdout.json
+      - name: Re-run preflight boundary
+        run: |
+          tk001 preflight | tee artifacts/preflight_calibration_stdout.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('artifacts/preflight_report.json').read_text())
+          bad=[x for x in r['checks'] if x['status'] in {'FAIL','BLOCKED','REVIEW'}]
+          if bad:
+              print(json.dumps(bad, indent=2))
+              raise SystemExit(2)
+          PY
+      - name: Freeze cycles 1-29 calibration
+        run: tk001 calibrate-real | tee artifacts/calibration_stdout.json
+      - name: Enforce frozen receipt boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('artifacts/frozen_calibration_receipt.json').read_text())
+          assert r['status']=='PASS'
+          assert r['split']['training_cycles']==[1,29]
+          assert r['split']['holdout_cycles']==[30,39]
+          assert r['holdout_used_for_fit_or_threshold_selection'] is False
+          assert len(r['training_duration_hours'])==29
+          print(json.dumps({
+            'status': r['status'],
+            'best_single_sensor': r['best_single_sensor']['name'],
+            'joint_warning_threshold': r['warning_thresholds']['terrynce_joint_load_relief']['threshold'],
+            'receipt_boundary': r['boundary'],
+          }, indent=2))
+          PY
+      - name: Upload frozen calibration receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TERRYNCE-KILAUEA-001-frozen-calibration
+          path: |
+            TERRYNCE-KILAUEA-001/artifacts/*.json
+            TERRYNCE-KILAUEA-001/artifacts/*.sha256
+          if-no-files-found: error
+          retention-days: 30

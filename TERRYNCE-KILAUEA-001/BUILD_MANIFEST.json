@@ -1,12 +1,7 @@
 {
   "experiment_id": "TERRYNCE-KILAUEA-001",
-  "file_count": 31,
+  "stage": "frozen-training-calibration",
   "files": [
-    {
-      "path": ".github/workflows/ci.yml",
-      "bytes": 411,
-      "sha256": "2a001253be578da63713edf025c9c8f00948bcd3985dd9597daea2bbf49befec"
-    },
     {
       "path": ".gitignore",
       "bytes": 181,
@@ -29,13 +24,23 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 1214,
-      "sha256": "7dc1731ccd9e348c42e53efc6628459823290fd9b455f7273b9f3141c179c6a6"
+      "bytes": 3101,
+      "sha256": "5c569f9926203dcd346c652af2884ab4c72ea834ca03773731cfab6b3466146e"
     },
     {
       "path": "artifacts/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/holdout_predictions.csv",
+      "bytes": 208091,
+      "sha256": "4912ebfe3940c4de296d2f6b98a645cbec697e74b55448200293f3d90e161c49"
+    },
+    {
+      "path": "artifacts/replay_report.json",
+      "bytes": 3807,
+      "sha256": "c26237ed8d08dbd09bad0c596867a77db4028b288fefe34bb891ed388d59c832"
     },
     {
       "path": "config/frozen_protocol.json",
@@ -73,9 +78,19 @@
       "sha256": "f198613464b0e46208b609016aa3248ca11ed15f111a904a54df65a3e4807890"
     },
     {
+      "path": "src/terrynce_kilauea/author_schema.py",
+      "bytes": 3352,
+      "sha256": "0d682f345f92793c0e8e89f13a4d7e0bb8eebe7ff234f8a27440e987ba5c16d2"
+    },
+    {
       "path": "src/terrynce_kilauea/baselines.py",
       "bytes": 1822,
       "sha256": "85f460c747eed3e04ea32266d166503e36753ee52351da27bd311dcf2e914703"
+    },
+    {
+      "path": "src/terrynce_kilauea/calibration.py",
+      "bytes": 4183,
+      "sha256": "24c3faec65680654ed68468ea108b2a3eadb14885f58a92806e7ab2e0957a2a8"
     },
     {
       "path": "src/terrynce_kilauea/canonical.py",
@@ -84,8 +99,8 @@
     },
     {
       "path": "src/terrynce_kilauea/cli.py",
-      "bytes": 1602,
-      "sha256": "4dc341d338e42d01b8cd09231a7ae95f7f51f77f4f9178c9a7c0536809437606"
+      "bytes": 1776,
+      "sha256": "25b6e410bb4633bf4012e02c26cfd956e79c3142cc77dce069b7c7d3053de2b3"
     },
     {
       "path": "src/terrynce_kilauea/code_scan.py",
@@ -104,13 +119,18 @@
     },
     {
       "path": "src/terrynce_kilauea/preflight.py",
-      "bytes": 3273,
-      "sha256": "d61f87387eb501e702341012f29de02f4ec90f837bc9844697b44001924654c1"
+      "bytes": 4271,
+      "sha256": "5ef4bb877d2c3b3f7bb20cc1c9cf2b6bc703be11246a855a2a2eeb2dbd2d1d0a"
     },
     {
       "path": "src/terrynce_kilauea/protocol.py",
       "bytes": 603,
       "sha256": "fe2b603995258677cbc8ba2def9e1ccfe471e550f26d18b98e26f501536b5dad"
+    },
+    {
+      "path": "src/terrynce_kilauea/realdata.py",
+      "bytes": 4326,
+      "sha256": "aad9259a3eafa2b21d1005e1a4b01fd8a8b5830bda5b4708eec35cdcce549d24"
     },
     {
       "path": "src/terrynce_kilauea/replay.py",
@@ -133,6 +153,11 @@
       "sha256": "1bafd85afc6771e10bde16198ce9dbd45e33c4778d6344dede0ab6b3189e3680"
     },
     {
+      "path": "tests/test_author_schema.py",
+      "bytes": 783,
+      "sha256": "86686861ce246eb97386b1c3294db2d99de0f0acfdfab53f516e58d1d07e8a9c"
+    },
+    {
       "path": "tests/test_canonical.py",
       "bytes": 328,
       "sha256": "0062047e3cdc6f12097f25b5b6580685d60580ce902ca51fb5180cad8bda372d"
@@ -148,6 +173,11 @@
       "sha256": "04464321eb6a21e27bcbe17f07b2e1188a639297ccd23bf068b6251f6ffe8472"
     },
     {
+      "path": "tests/test_realdata_calibration.py",
+      "bytes": 1389,
+      "sha256": "15673a3c2de01f1b4038c6d96d2c55fa9c4b9773f862e42c221a616ee878cc20"
+    },
+    {
       "path": "tests/test_replay.py",
       "bytes": 433,
       "sha256": "c02d8df8b3eadcaadafe14e09e8c6397710926de19218ac9f3b0597e9f20591b"
@@ -157,5 +187,6 @@
       "bytes": 322,
       "sha256": "a3893b294783805951271001e0561e2d7b46578ec7de7170a3a91d01a610fe19"
     }
-  ]
+  ],
+  "file_count": 37
 }
