@@ -21,3 +21,7 @@ Blocked by evidence, not code: this build environment could read the Zenodo reco
 ## GitHub Actions integration
 
 The repository-root workflow is `.github/workflows/terrynce-kilauea-001.yml` and appears in Actions as `TERRYNCE-KILAUEA-001`. It runs only when this experiment or its workflow changes, and also supports manual dispatch.
+
+## Real-data preflight workflow
+
+Run **TERRYNCE-KILAUEA-001 Real Data Preflight** manually in GitHub Actions. It acquires and verifies the published archive on the runner, performs schema/leakage preflight, and uploads only receipt JSON artifacts. A green workflow means acquisition/integrity hard checks cleared; any `REVIEW` item still must be resolved before held-out scoring.
