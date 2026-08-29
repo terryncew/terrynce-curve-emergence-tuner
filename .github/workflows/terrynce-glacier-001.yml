@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Run contract tests
-        run: python -m unittest discover -s tests -p 'test_terrynce_glacier_001.py'
+        run: python -m unittest discover -s tests -p 'test_terrynce_glacier_001*.py'
       - name: Acquire pinned public displacement archive
         run: |
           curl --fail --location --retry 3 \

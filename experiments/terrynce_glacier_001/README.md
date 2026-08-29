@@ -59,3 +59,11 @@ All four inputs must be pinned before any threshold is fit:
 
 Until then, no warning-performance number is earned.
 
+## Author-derived data intake
+
+The next stage is implemented under [`author_intake/`](author_intake/). It
+contains a send-ready request for the missing derived measurements and a
+fail-closed validator for any returned bundle. Raw PlanetScope imagery is
+outside the contract. A bundle becomes eligible only when its file hashes,
+provenance, final East interval, frozen spatial roles, terminus series,
+five glacier-years of observed controls, and CSD cadence all pass.
