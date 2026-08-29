@@ -1,0 +1,18 @@
+{
+  "contact_attempted": false,
+  "dataset_doi": "10.5281/zenodo.17754687",
+  "dataset_md5": "cf418a1dc5f062e2ba2c2f98008f3e40",
+  "experiment_id": "TERRYNCE-GLACIER-001",
+  "missing_derived_material": [
+    "PLANETSCOPE_FINAL_EAST_INTERVALS",
+    "FROZEN_ALONG_FLOW_POINT_ROLES",
+    "DATED_TERMINUS_POSITION_SERIES",
+    "FIVE_GLACIER_YEARS_OF_NON_DETACHING_CONTROLS"
+  ],
+  "paper_data_availability_claim": "The ice displacements for the glacier velocity timeseries of this study using image matching are available on Zenodo.",
+  "paper_doi": "10.1038/s43247-025-03125-z",
+  "public_archive_last_east_acquisition": "2022-10-16",
+  "raw_commercial_imagery_requested": false,
+  "status": "AUTHOR_DERIVED_DATA_REQUEST_READY",
+  "version": 1
+}

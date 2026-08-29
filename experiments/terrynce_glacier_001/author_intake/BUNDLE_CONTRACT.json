@@ -1,0 +1,31 @@
+{
+  "allowed_source_products": [
+    "PLANETSCOPE_DERIVED",
+    "SENTINEL_2_DERIVED",
+    "AUTHOR_PUBLISHED_DERIVED"
+  ],
+  "bundle_files": {
+    "control_registry": "control_registry.csv",
+    "manifest": "bundle_manifest.json",
+    "terminus_observations": "terminus_observations.csv",
+    "velocity_observations": "velocity_observations.csv"
+  },
+  "critical_slowing_down_gate": {
+    "maximum_gap_multiplier_of_median": 2.0,
+    "minimum_acquisitions": 15
+  },
+  "east_final_interval": {
+    "latest_required_end_utc": "2022-11-01T03:42:00Z",
+    "required_zones": [
+      "UPSTREAM",
+      "TERMINUS"
+    ]
+  },
+  "experiment_id": "TERRYNCE-GLACIER-001",
+  "failure_time_utc": "2022-11-01T05:57:00Z",
+  "minimum_control_exposure_glacier_years": 5.0,
+  "raw_imagery_allowed": false,
+  "schema_version": 1,
+  "source_doi": "10.1038/s43247-025-03125-z",
+  "velocity_tolerance_m_per_day": 1e-06
+}
