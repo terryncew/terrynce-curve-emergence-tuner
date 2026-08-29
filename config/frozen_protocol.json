@@ -1,0 +1,36 @@
+{
+  "experiment_id": "TERRYNCE-KILAUEA-001",
+  "protocol_version": 1,
+  "split": {
+    "n_cycles": 39,
+    "train_cycles": 29,
+    "test_cycles": 10,
+    "ordering": "chronological"
+  },
+  "decision_grid": {
+    "start_hours": 4.8,
+    "step_minutes": 15,
+    "stop_before_failure_hours": 1.0
+  },
+  "fixed_point_forecast_hours": [12.0, 24.0],
+  "warning": {
+    "target_horizon_hours": 6.0,
+    "training_false_positive_rate_cap": 0.05,
+    "persistence_steps": 2
+  },
+  "signal": {
+    "trailing_slope_minutes": 60,
+    "early_rate_window_hours": [4.8, 9.6],
+    "progress_scale_quantile": 0.90,
+    "ridge_lambda": 1e-6,
+    "aggregation": "median",
+    "formula": "S=L*E*A"
+  },
+  "baselines": [
+    "previous_cycle_timing",
+    "best_single_sensor",
+    "published_gnn",
+    "terrynce_joint_load_relief"
+  ],
+  "decision_rule": "Terrynce wins only if held-out timing and/or warning performance improves over conventional baselines without exceeding their false-alarm constraint; ties with best single sensor or published GNN are a loss for the broad joint-signal claim."
+}
