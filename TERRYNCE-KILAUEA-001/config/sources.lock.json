@@ -1,0 +1,30 @@
+{
+  "dataset_record": {
+    "title": "Deep Learning Forecasts Caldera Collapse Events at Kīlauea Volcano",
+    "authors": ["Ian W. McBrearty", "Paul Segall"],
+    "zenodo_record": 12748390,
+    "doi": "10.5281/zenodo.12748390",
+    "files": [
+      {
+        "name": "Kilauea_training_data.mat",
+        "size_mb_published": 559.6,
+        "md5": "b37876ec73737716c8b2411815916930",
+        "url": "https://zenodo.org/records/12748390/files/Kilauea_training_data.mat?download=1"
+      },
+      {
+        "name": "train_GNN_models.py",
+        "md5": "b49e7acc241630db71bc934e26ac282c",
+        "url": "https://zenodo.org/records/12748390/files/train_GNN_models.py?download=1"
+      },
+      {
+        "name": "make_result_figures.py",
+        "md5": "ed05511c1573a36972275129c347ffda",
+        "url": "https://zenodo.org/records/12748390/files/make_result_figures.py?download=1"
+      }
+    ]
+  },
+  "paper": {
+    "doi": "10.1029/2024JB029471",
+    "title": "Deep Learning Forecasts Caldera Collapse Events at Kīlauea Volcano"
+  }
+}
