@@ -33,3 +33,8 @@ Real-data preflight #1 correctly acquired and MD5-verified the published archive
 ## 2026-08-29 — frozen calibration stage
 
 Real-data preflight has cleared externally. This build adds a training-only MATLAB adapter plus `tk001 calibrate-real`. The calibration workflow uses cycles 1–29 only, freezes the joint deformation fit, best single-sensor selection, and matched warning thresholds, and includes a holdout-mutation falsifier proving that arbitrary changes to cycles 30–39 cannot change the extracted training set. No holdout score is produced at this stage.
+
+
+## Held-out replay Phase A
+
+The next workflow opens cycles 30–39 only after reproducing the frozen cycles 1–29 calibration. It scores previous-cycle timing, the frozen best single sensor, and the frozen Terrynce joint load–relief model. The preregistered final verdict remains withheld until the published GNN is reproduced on the same causal grid. Once Phase A runs, TERRYNCE-KILAUEA-001 is permanently post-holdout: no tuning is allowed under this experiment ID.
