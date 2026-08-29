@@ -1,9 +1,19 @@
 {
-  "claim": "Schema smoke test",
-  "because": ["vector check"],
-  "but": [],
-  "so": "ok",
-  "telem": { "delta_scale": 0.0 },
-  "threshold": 0.03,
-  "model": "openline-core/test"
+  "claim_status": "UNTESTED",
+  "experiment_id": "TERRYNCE-GLACIER-001",
+  "headline_test_ready": false,
+  "observed_limits": {
+    "control_exposure_glacier_years": 1.136231,
+    "days_missing_before_detachment": 16,
+    "frozen_spatial_roles_present": false,
+    "sampling_gate_passed": false
+  },
+  "source": {
+    "archive_md5": "cf418a1dc5f062e2ba2c2f98008f3e40",
+    "doi": "10.5281/zenodo.17754687",
+    "version": "v1"
+  },
+  "status": "PUBLIC_DATA_INSUFFICIENT_FOR_FROZEN_HEADLINE_TEST",
+  "verified_by": "experiments/terrynce_glacier_001/verify_feasibility.py",
+  "version": 1
 }
