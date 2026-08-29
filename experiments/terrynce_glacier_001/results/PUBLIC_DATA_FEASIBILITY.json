@@ -1,0 +1,122 @@
+{
+  "claim_status": "UNTESTED",
+  "experiment_id": "TERRYNCE-GLACIER-001",
+  "feasibility_gates": {
+    "control_exposure": false,
+    "csd_east_final_prefix": false,
+    "final_warning_window": false,
+    "frozen_spatial_roles": false,
+    "source_identity": true
+  },
+  "headline_test_ready": false,
+  "observations": {
+    "control_exposure_glacier_years_from_open_archive": 1.136231,
+    "east_days_from_last_open_acquisition_to_failure": 16,
+    "east_missing_paper_reported_final_dates": [
+      "2022-10-30",
+      "2022-10-31",
+      "2022-11-01"
+    ],
+    "semantic_role_fields_present": false
+  },
+  "reason_codes": [
+    "FINAL_WARNING_WINDOW_ABSENT",
+    "FROZEN_SPATIAL_ROLE_METADATA_ABSENT",
+    "CONTROL_EXPOSURE_BELOW_FIVE_GLACIER_YEARS",
+    "CSD_SAMPLING_GATE_FAILED"
+  ],
+  "sides": {
+    "east": {
+      "acquisition_count": 19,
+      "acquisitions": [
+        "2016-12-26",
+        "2017-12-26",
+        "2018-12-26",
+        "2019-12-31",
+        "2020-02-24",
+        "2020-04-14",
+        "2020-09-21",
+        "2020-12-30",
+        "2021-02-18",
+        "2021-05-04",
+        "2021-10-01",
+        "2021-12-20",
+        "2022-03-20",
+        "2022-05-04",
+        "2022-06-23",
+        "2022-07-23",
+        "2022-08-27",
+        "2022-09-11",
+        "2022-10-16"
+      ],
+      "columns": [
+        "X",
+        "Y",
+        "dx",
+        "dy",
+        "length",
+        "direction",
+        "max_corrcoeff",
+        "avg_corrcoeff"
+      ],
+      "csd_final_prefix_sampling_gate": {
+        "acquisitions_in_window": 15,
+        "maximum_gap_days": 160,
+        "median_gap_days": 50.0,
+        "passed": false,
+        "reason": "GAP_LIMIT_EXCEEDED",
+        "window_rule": "latest_15_acquisitions"
+      },
+      "first_acquisition": "2016-12-26",
+      "interval_file_count": 30,
+      "last_acquisition": "2022-10-16",
+      "total_vector_rows": 972
+    },
+    "west": {
+      "acquisition_count": 12,
+      "acquisitions": [
+        "2019-12-31",
+        "2020-02-24",
+        "2020-04-14",
+        "2020-09-21",
+        "2020-10-01",
+        "2020-10-11",
+        "2020-10-16",
+        "2020-10-26",
+        "2020-11-10",
+        "2020-12-05",
+        "2020-12-30",
+        "2021-02-18"
+      ],
+      "columns": [
+        "X",
+        "Y",
+        "dx",
+        "dy",
+        "length",
+        "direction",
+        "max_corrcoeff",
+        "avg_corrcoeff"
+      ],
+      "csd_final_prefix_sampling_gate": {
+        "acquisitions_in_window": 12,
+        "maximum_gap_days": null,
+        "median_gap_days": null,
+        "passed": false,
+        "reason": "TOO_FEW_ACQUISITIONS",
+        "window_rule": "latest_15_acquisitions"
+      },
+      "first_acquisition": "2019-12-31",
+      "interval_file_count": 12,
+      "last_acquisition": "2021-02-18",
+      "total_vector_rows": 471
+    }
+  },
+  "source": {
+    "archive_md5": "cf418a1dc5f062e2ba2c2f98008f3e40",
+    "doi": "10.5281/zenodo.17754687",
+    "version": "v1"
+  },
+  "status": "PUBLIC_DATA_INSUFFICIENT_FOR_FROZEN_HEADLINE_TEST",
+  "version": 1
+}

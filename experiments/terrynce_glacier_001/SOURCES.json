@@ -1,0 +1,33 @@
+{
+  "dataset": {
+    "archive_file": "disp.zip",
+    "archive_md5": "cf418a1dc5f062e2ba2c2f98008f3e40",
+    "archive_url": "https://zenodo.org/records/17754687/files/disp.zip?download=1",
+    "doi": "10.5281/zenodo.17754687",
+    "record_url": "https://zenodo.org/records/17754687",
+    "version": "v1"
+  },
+  "paper": {
+    "doi": "10.1038/s43247-025-03125-z",
+    "published": "2026-01-26",
+    "title": "Recent giant detachment of a glacier on the Tibetan plateau provoked by its frozen tongue",
+    "url": "https://www.nature.com/articles/s43247-025-03125-z"
+  },
+  "paper_reported_facts_used_by_gate": {
+    "detachment_time_utc_approx": "2022-11-01T05:57:00Z",
+    "east_final_intervals": [
+      {
+        "end": "2022-10-31",
+        "speed_m_per_day": 26,
+        "start": "2022-10-30"
+      },
+      {
+        "end": "2022-11-01",
+        "speed_m_per_day": 46,
+        "start": "2022-10-31"
+      }
+    ],
+    "west_advance_m": 500
+  }
+}
+

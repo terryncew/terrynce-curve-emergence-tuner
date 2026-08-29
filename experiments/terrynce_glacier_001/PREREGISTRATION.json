@@ -1,0 +1,78 @@
+{
+  "boundaries": {
+    "bridge_equation_status": "RETIRED",
+    "chamoli_role": "HOSTILE_OUT_OF_MECHANISM_SCOPE_TEST",
+    "nepal_2026_role": "MOTIVATION_ONLY",
+    "universal_tipping_claim": false
+  },
+  "calibration": {
+    "minimum_control_exposure_glacier_years": 5.0,
+    "observed_false_alarms_allowed": 0,
+    "threshold_data": "CONTROL_ONLY"
+  },
+  "claim": "At matched observed false-alarm burden, a persistent joint signal of high upstream velocity and longitudinal compression caused by absent terminus relief provides more warning lead time for Bukadaban-mechanism glacier detachment than velocity alone or a prospective power-law forecast.",
+  "critical_slowing_down": {
+    "forward_interpolation": false,
+    "indicators": [
+      "rolling_ar1",
+      "rolling_variance"
+    ],
+    "maximum_gap_multiplier_of_median": 2.0,
+    "minimum_acquisitions": 15,
+    "on_gate_failure": "NOT_ESTIMABLE"
+  },
+  "decision_rule": {
+    "alarm_admission_time": "SECOND_CONSECUTIVE_QUALIFYING_ACQUISITION",
+    "joint_condition": [
+      "upstream_velocity_exceeds_control_calibrated_threshold",
+      "longitudinal_strain_rate_is_negative",
+      "terminus_relief_is_absent"
+    ],
+    "persistence_acquisitions": 2
+  },
+  "design_pair": {
+    "detachment_candidate": "BUKADABAN_EAST",
+    "surge_relief_control": "BUKADABAN_WEST"
+  },
+  "experiment_id": "TERRYNCE-GLACIER-001",
+  "falsifier": "The mechanical hypothesis is falsified if the joint load-relief signal fails to exceed the warning lead time of velocity-only or prospective power-law baselines under the identical frozen false-alarm rule, or if it requires outcome-aware spatial labels, thresholds, interpolation, or control selection.",
+  "lead_time": {
+    "definition": "failure_time_minus_alarm_admission_time",
+    "primary_comparison": "lead_time_days_at_frozen_observed_false_alarm_burden"
+  },
+  "power_law": {
+    "alpha": "FREE_PREFIX_ONLY_PARAMETER",
+    "fit_data": "T_LE_CUTOFF_ONLY",
+    "form": "v(t) = A * (t_f - t)^(-alpha)",
+    "invalid_fit_disposition": "NO_FORECAST",
+    "t_f": "FREE_PREFIX_ONLY_PARAMETER"
+  },
+  "required_normalized_observation_fields": [
+    "glacier_id",
+    "observed_at",
+    "position_m_along_flowline",
+    "zone",
+    "along_flow_velocity_m_per_day",
+    "terminus_position_m"
+  ],
+  "spatial_rule": {
+    "allowed_zone_values": [
+      "UPSTREAM",
+      "TERMINUS"
+    ],
+    "labels_must_be_frozen_before_outcome_replay": true,
+    "unlabeled_point_cloud_inference": "PROHIBITED"
+  },
+  "status": "FROZEN_PENDING_DATA_SUFFICIENCY",
+  "velocity_baseline": {
+    "form": "upstream_velocity_exceeds_control_calibrated_threshold",
+    "threshold_data": "CONTROL_ONLY"
+  },
+  "version": 1,
+  "walk_forward": {
+    "future_aware_smoothing": false,
+    "prefix_only": true,
+    "threshold_refit_on_candidate": false
+  }
+}
+

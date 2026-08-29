@@ -1,0 +1,42 @@
+name: TERRYNCE-GLACIER-001
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/terrynce-glacier-001.yml"
+      - "experiments/terrynce_glacier_001/**"
+      - "tests/test_terrynce_glacier_001.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-data-feasibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run contract tests
+        run: python -m unittest discover -s tests -p 'test_terrynce_glacier_001.py'
+      - name: Acquire pinned public displacement archive
+        run: |
+          curl --fail --location --retry 3 \
+            --output /tmp/bukadaban-disp.zip \
+            'https://zenodo.org/records/17754687/files/disp.zip?download=1'
+      - name: Reproduce frozen feasibility receipt
+        run: |
+          python experiments/terrynce_glacier_001/run_feasibility.py \
+            --archive /tmp/bukadaban-disp.zip \
+            --output /tmp/PUBLIC_DATA_FEASIBILITY.json
+          cmp \
+            experiments/terrynce_glacier_001/results/PUBLIC_DATA_FEASIBILITY.json \
+            /tmp/PUBLIC_DATA_FEASIBILITY.json
+      - name: Verify independently
+        run: |
+          python experiments/terrynce_glacier_001/verify_feasibility.py \
+            --archive /tmp/bukadaban-disp.zip \
+            --result experiments/terrynce_glacier_001/results/PUBLIC_DATA_FEASIBILITY.json
