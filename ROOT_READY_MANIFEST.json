@@ -1,0 +1,165 @@
+{
+  "package": "TERRYNCE-KILAUEA-001",
+  "files": [
+    {
+      "path": ".github/workflows/terrynce-kilauea-001.yml",
+      "bytes": 721,
+      "sha256": "da43e152cc08286904565e45d711101d2d9b04db9f2ef05ee827787920695c05"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/.gitignore",
+      "bytes": 181,
+      "sha256": "7dc44e347d2db0c6cae8b00f38e2844f32ee856b22bb7695fb941a763866518c"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/BUILD_MANIFEST.json",
+      "bytes": 5012,
+      "sha256": "8c413a84fa4224bfc1903d443bc925411b53cb9451e922d83af5c7964145467a"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/CITATIONS.md",
+      "bytes": 519,
+      "sha256": "0cca21a95711d0698c84898dd094b22eed63da239fc9abe6c983393166d04afe"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/PREREGISTRATION.md",
+      "bytes": 4283,
+      "sha256": "f474a151d6e673b3ddf2f4f23b403b6d138a6fe29642b7a4303a93eb4af11af8"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/README.md",
+      "bytes": 2960,
+      "sha256": "4f14df3dd30bf1cc04067d730a5fa8aec9d2f14fdcec6e9d3784f939e1bf840c"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/STATUS.md",
+      "bytes": 1467,
+      "sha256": "dae071bd464685bf48c119f6b8c3660425193d1a8dbeb669da7b8584bf444cb9"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/artifacts/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/config/frozen_protocol.json",
+      "bytes": 1078,
+      "sha256": "121fc1bb919d19c103c762d60414e4c4533def0d34a0961101c51d0ef7533038"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/config/sources.lock.json",
+      "bytes": 1036,
+      "sha256": "75e1756224456274c38bc4a697b2b30ce32c5b25cd3652f91a20fd67e75ad1be"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/data/processed/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/data/raw/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/pyproject.toml",
+      "bytes": 581,
+      "sha256": "d85e48c856077d4db4a36ffa4fae975d7028f12ebf3bb605a43310224f496c75"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/acquire.py",
+      "bytes": 2036,
+      "sha256": "f198613464b0e46208b609016aa3248ca11ed15f111a904a54df65a3e4807890"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/baselines.py",
+      "bytes": 1822,
+      "sha256": "85f460c747eed3e04ea32266d166503e36753ee52351da27bd311dcf2e914703"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/canonical.py",
+      "bytes": 2850,
+      "sha256": "299fb4a3417eca7a898c781599791c228a5c66814203376825d741b8165c66f3"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/cli.py",
+      "bytes": 1602,
+      "sha256": "4dc341d338e42d01b8cd09231a7ae95f7f51f77f4f9178c9a7c0536809437606"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/code_scan.py",
+      "bytes": 1402,
+      "sha256": "3868e287ba56b7d80abbd0717caeeda3f1fefd8768ef75c35512da1970520f7d"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/hashing.py",
+      "bytes": 389,
+      "sha256": "ac2e66f4a3e4087e4b8ea0afcbc7a00c78203cd95d2dae0c6547fbd73bcadbd9"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/mat_inventory.py",
+      "bytes": 3755,
+      "sha256": "533e47a55529db8f24d61a85b679f45848341c047fb9e0d0533d578db0d3afc4"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/preflight.py",
+      "bytes": 3273,
+      "sha256": "d61f87387eb501e702341012f29de02f4ec90f837bc9844697b44001924654c1"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/protocol.py",
+      "bytes": 603,
+      "sha256": "fe2b603995258677cbc8ba2def9e1ccfe471e550f26d18b98e26f501536b5dad"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/replay.py",
+      "bytes": 7059,
+      "sha256": "e37448df53fd846f46c991c8e2116f3dbf1a901cce82ca4f6f96e85f14fc5499"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/scoring.py",
+      "bytes": 3866,
+      "sha256": "9ab9f2bbff22379021ef39d8c3035b6acc527620408e571b8a9280b7b5e89f60"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/signal.py",
+      "bytes": 4739,
+      "sha256": "3dee3e201e330e3cc5f78de4dbff157f9b3eb9f6d13458f4998206bd8934c9dd"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/synthetic.py",
+      "bytes": 987,
+      "sha256": "1bafd85afc6771e10bde16198ce9dbd45e33c4778d6344dede0ab6b3189e3680"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_canonical.py",
+      "bytes": 328,
+      "sha256": "0062047e3cdc6f12097f25b5b6580685d60580ce902ca51fb5180cad8bda372d"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_causality.py",
+      "bytes": 906,
+      "sha256": "25205a9ce5e66b6df6d111cc943371890d1f9b024fbf3ab9bedf2a002c50f6a3"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_protocol.py",
+      "bytes": 278,
+      "sha256": "04464321eb6a21e27bcbe17f07b2e1188a639297ccd23bf068b6251f6ffe8472"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_replay.py",
+      "bytes": 433,
+      "sha256": "c02d8df8b3eadcaadafe14e09e8c6397710926de19218ac9f3b0597e9f20591b"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_split_falsifier.py",
+      "bytes": 322,
+      "sha256": "a3893b294783805951271001e0561e2d7b46578ec7de7170a3a91d01a610fe19"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: TERRYNCE-KILAUEA-001
+
+on:
+  push:
+    paths:
+      - 'TERRYNCE-KILAUEA-001/**'
+      - '.github/workflows/terrynce-kilauea-001.yml'
+  pull_request:
+    paths:
+      - 'TERRYNCE-KILAUEA-001/**'
+      - '.github/workflows/terrynce-kilauea-001.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: TERRYNCE-KILAUEA-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - run: pytest
+      - run: tk001 synthetic /tmp/synthetic39.csv
+      - run: tk001 validate /tmp/synthetic39.csv
+      - run: tk001 replay /tmp/synthetic39.csv
