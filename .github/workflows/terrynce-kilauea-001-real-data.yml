@@ -1,0 +1,83 @@
+name: TERRYNCE-KILAUEA-001 Real Data Preflight
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: TERRYNCE-KILAUEA-001
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: TERRYNCE-KILAUEA-001/pyproject.toml
+
+      - name: Install harness
+        run: pip install -e '.[dev]'
+
+      - name: Show disk budget
+        run: df -h .
+
+      - name: Acquire and verify published Kilauea data
+        run: tk001 acquire | tee artifacts/acquire_stdout.json
+
+      - name: Run frozen real-data preflight
+        run: tk001 preflight | tee artifacts/preflight_stdout.json
+
+      - name: Enforce preflight boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('artifacts/preflight_report.json')
+          report = json.loads(p.read_text())
+          bad = [c for c in report['checks'] if c['status'] in {'FAIL', 'BLOCKED'}]
+          print(json.dumps({
+              'experiment_id': report['experiment_id'],
+              'status': report['status'],
+              'protocol_sha256': report['protocol_sha256'],
+              'hard_failures': bad,
+              'boundary': report['boundary'],
+          }, indent=2))
+          if bad:
+              raise SystemExit(2)
+          PY
+
+      - name: Write receipt manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          art = Path('artifacts')
+          rows = []
+          for p in sorted(art.glob('*')):
+              if p.is_file():
+                  rows.append({
+                      'name': p.name,
+                      'bytes': p.stat().st_size,
+                      'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
+                  })
+          (art / 'artifact_manifest.json').write_text(json.dumps(rows, indent=2) + '\n')
+          PY
+
+      - name: Upload preflight receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TERRYNCE-KILAUEA-001-real-data-preflight
+          path: |
+            TERRYNCE-KILAUEA-001/artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30

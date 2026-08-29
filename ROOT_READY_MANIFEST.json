@@ -1,6 +1,11 @@
 {
-  "package": "TERRYNCE-KILAUEA-001",
+  "artifact": "TERRYNCE-KILAUEA-001 real-data preflight patch",
   "files": [
+    {
+      "path": ".github/workflows/terrynce-kilauea-001-real-data.yml",
+      "bytes": 2403,
+      "sha256": "2f6e63fa0c43d55cbbad6d49ca8592536d413af7bfca7b31dd3c9c44e923db14"
+    },
     {
       "path": ".github/workflows/terrynce-kilauea-001.yml",
       "bytes": 721,
@@ -33,8 +38,8 @@
     },
     {
       "path": "TERRYNCE-KILAUEA-001/STATUS.md",
-      "bytes": 1467,
-      "sha256": "dae071bd464685bf48c119f6b8c3660425193d1a8dbeb669da7b8584bf444cb9"
+      "bytes": 1848,
+      "sha256": "e1bb47e9ebce98a04c769ba51586d58547746e84f4baf83d6d6e0f5811cd61fb"
     },
     {
       "path": "TERRYNCE-KILAUEA-001/artifacts/.gitkeep",
