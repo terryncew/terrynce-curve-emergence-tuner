@@ -25,3 +25,7 @@ The repository-root workflow is `.github/workflows/terrynce-kilauea-001.yml` and
 ## Real-data preflight workflow
 
 Run **TERRYNCE-KILAUEA-001 Real Data Preflight** manually in GitHub Actions. It acquires and verifies the published archive on the runner, performs schema/leakage preflight, and uploads only receipt JSON artifacts. A green workflow means acquisition/integrity hard checks cleared; any `REVIEW` item still must be resolved before held-out scoring.
+
+## 2026-08-29 schema-preflight correction
+
+Real-data preflight #1 correctly acquired and MD5-verified the published archive, then stopped at the boundary. The stop was caused by an invalid *top-level* 39-axis heuristic: the released author code shows that the 39 cycles live inside MATLAB cell arrays (`X_l`, `Y_l`) and are indexed as `X_l_s[0][i][0,:,:,:]` and `Y_l_s[0][i][:,0]`. This patch replaces that heuristic with a source-matched cell-schema probe. It also freezes the released channel map (0–4 GPS, 5 tilt, 6 cumulative seismicity), verifies the literal 29/10 split in author code, and verifies that the GNN normalization vector is fixed constants rather than statistics fitted from the holdout. No holdout values are exported or scored by preflight.

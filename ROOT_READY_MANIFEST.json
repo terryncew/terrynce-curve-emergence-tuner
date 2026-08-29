@@ -1,16 +1,6 @@
 {
-  "artifact": "TERRYNCE-KILAUEA-001 real-data preflight patch",
+  "package": "TERRYNCE-KILAUEA-001-schema-preflight-fix",
   "files": [
-    {
-      "path": ".github/workflows/terrynce-kilauea-001-real-data.yml",
-      "bytes": 2403,
-      "sha256": "2f6e63fa0c43d55cbbad6d49ca8592536d413af7bfca7b31dd3c9c44e923db14"
-    },
-    {
-      "path": ".github/workflows/terrynce-kilauea-001.yml",
-      "bytes": 721,
-      "sha256": "da43e152cc08286904565e45d711101d2d9b04db9f2ef05ee827787920695c05"
-    },
     {
       "path": "TERRYNCE-KILAUEA-001/.gitignore",
       "bytes": 181,
@@ -38,13 +28,23 @@
     },
     {
       "path": "TERRYNCE-KILAUEA-001/STATUS.md",
-      "bytes": 1848,
-      "sha256": "e1bb47e9ebce98a04c769ba51586d58547746e84f4baf83d6d6e0f5811cd61fb"
+      "bytes": 2612,
+      "sha256": "08c66ac593c1be72df53dd0ab42d1b962bc5a7e451ac427fb4022ba9205bbb8b"
     },
     {
       "path": "TERRYNCE-KILAUEA-001/artifacts/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/artifacts/holdout_predictions.csv",
+      "bytes": 208091,
+      "sha256": "4912ebfe3940c4de296d2f6b98a645cbec697e74b55448200293f3d90e161c49"
+    },
+    {
+      "path": "TERRYNCE-KILAUEA-001/artifacts/replay_report.json",
+      "bytes": 3807,
+      "sha256": "c26237ed8d08dbd09bad0c596867a77db4028b288fefe34bb891ed388d59c832"
     },
     {
       "path": "TERRYNCE-KILAUEA-001/config/frozen_protocol.json",
@@ -82,6 +82,11 @@
       "sha256": "f198613464b0e46208b609016aa3248ca11ed15f111a904a54df65a3e4807890"
     },
     {
+      "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/author_schema.py",
+      "bytes": 3352,
+      "sha256": "0d682f345f92793c0e8e89f13a4d7e0bb8eebe7ff234f8a27440e987ba5c16d2"
+    },
+    {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/baselines.py",
       "bytes": 1822,
       "sha256": "85f460c747eed3e04ea32266d166503e36753ee52351da27bd311dcf2e914703"
@@ -113,8 +118,8 @@
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/preflight.py",
-      "bytes": 3273,
-      "sha256": "d61f87387eb501e702341012f29de02f4ec90f837bc9844697b44001924654c1"
+      "bytes": 4271,
+      "sha256": "5ef4bb877d2c3b3f7bb20cc1c9cf2b6bc703be11246a855a2a2eeb2dbd2d1d0a"
     },
     {
       "path": "TERRYNCE-KILAUEA-001/src/terrynce_kilauea/protocol.py",
@@ -142,6 +147,11 @@
       "sha256": "1bafd85afc6771e10bde16198ce9dbd45e33c4778d6344dede0ab6b3189e3680"
     },
     {
+      "path": "TERRYNCE-KILAUEA-001/tests/test_author_schema.py",
+      "bytes": 783,
+      "sha256": "86686861ce246eb97386b1c3294db2d99de0f0acfdfab53f516e58d1d07e8a9c"
+    },
+    {
       "path": "TERRYNCE-KILAUEA-001/tests/test_canonical.py",
       "bytes": 328,
       "sha256": "0062047e3cdc6f12097f25b5b6580685d60580ce902ca51fb5180cad8bda372d"
@@ -165,6 +175,16 @@
       "path": "TERRYNCE-KILAUEA-001/tests/test_split_falsifier.py",
       "bytes": 322,
       "sha256": "a3893b294783805951271001e0561e2d7b46578ec7de7170a3a91d01a610fe19"
+    },
+    {
+      "path": ".github/workflows/terrynce-kilauea-001-real-data.yml",
+      "bytes": 2403,
+      "sha256": "2f6e63fa0c43d55cbbad6d49ca8592536d413af7bfca7b31dd3c9c44e923db14"
+    },
+    {
+      "path": ".github/workflows/terrynce-kilauea-001.yml",
+      "bytes": 721,
+      "sha256": "da43e152cc08286904565e45d711101d2d9b04db9f2ef05ee827787920695c05"
     }
   ]
 }
