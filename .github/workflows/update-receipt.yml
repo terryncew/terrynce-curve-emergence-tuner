@@ -1,17 +1,31 @@
-name: Update receipt
+name: Public research surface
+
 on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "LICENSE"
+      - "docs/**"
+      - "emergence_guard.py"
+      - "olp_client.py"
+      - "wire_openline_demo.py"
+      - "scripts/prebreach_guard.py"
+      - "tests/test_public_surface.py"
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
-  run:
+  verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Run demo (writes docs/receipt.latest.json)
-        run: python3 wire_openline_demo.py
-      - name: Commit
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify public files
         run: |
-          git config user.name "actions-bot"
-          git config user.email "actions@github.com"
-          git add docs/receipt.latest.json
-          git commit -m "chore: refresh receipt" || echo "no changes"
-          git push
+          python -m json.tool docs/receipt.latest.json >/dev/null
+          python -m unittest discover -s tests -p 'test_public_surface.py' -v

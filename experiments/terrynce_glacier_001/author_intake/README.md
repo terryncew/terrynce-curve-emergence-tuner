@@ -1,7 +1,7 @@
-# Author-derived data intake
+# External derived-data intake
 
-This directory accepts measurements, not pictures. A returned author bundle
-stays outside Git and must contain:
+This directory defines the public contract for measurements supplied outside
+the current Zenodo archive. Incoming bundles stay outside Git and must contain:
 
 ```text
 bundle_manifest.json
@@ -50,4 +50,3 @@ glacier_id,latitude,longitude,detached,control_source
 Control exposure is computed from the union of actual velocity-observation
 intervals. A five-year registry span with three measurements does not magically
 become five observed glacier-years.
-

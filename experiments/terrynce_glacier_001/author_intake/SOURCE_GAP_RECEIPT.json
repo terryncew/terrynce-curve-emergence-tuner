@@ -1,5 +1,4 @@
 {
-  "contact_attempted": false,
   "dataset_doi": "10.5281/zenodo.17754687",
   "dataset_md5": "cf418a1dc5f062e2ba2c2f98008f3e40",
   "experiment_id": "TERRYNCE-GLACIER-001",
@@ -13,6 +12,6 @@
   "paper_doi": "10.1038/s43247-025-03125-z",
   "public_archive_last_east_acquisition": "2022-10-16",
   "raw_commercial_imagery_requested": false,
-  "status": "AUTHOR_DERIVED_DATA_REQUEST_READY",
+  "status": "PUBLIC_DATA_GAP_DOCUMENTED",
   "version": 1
 }
