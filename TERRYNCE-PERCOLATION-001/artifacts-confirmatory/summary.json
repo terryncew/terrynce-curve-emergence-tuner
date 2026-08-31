@@ -1,0 +1,274 @@
+{
+  "disposition": "NO_ADDITIVE_VALUE",
+  "mean_absolute_error": {
+    "best_standard_per_case": 0.006208991534650006,
+    "terrynce": 0.1849179830693
+  },
+  "protocol_sha256": "50d2062d3c6a63aef4f631bee91b70a962a6b52a7d86b3b07e9ce19d7cceaf2a",
+  "records": [
+    {
+      "absolute_error": {
+        "giant": 0.010000000000000009,
+        "spanning": 0.020000000000000018,
+        "susceptibility": 0.020000000000000018,
+        "terrynce": 0.24
+      },
+      "estimates": {
+        "giant": 0.51,
+        "spanning": 0.48,
+        "susceptibility": 0.48,
+        "terrynce": 0.74
+      },
+      "family": "square_bond",
+      "known_pc": 0.5,
+      "n": 16
+    },
+    {
+      "absolute_error": {
+        "giant": 0.010000000000000009,
+        "spanning": 0.020000000000000018,
+        "susceptibility": 0.010000000000000009,
+        "terrynce": 0.24
+      },
+      "estimates": {
+        "giant": 0.51,
+        "spanning": 0.48,
+        "susceptibility": 0.51,
+        "terrynce": 0.74
+      },
+      "family": "square_bond",
+      "known_pc": 0.5,
+      "n": 24
+    },
+    {
+      "absolute_error": {
+        "giant": 0.010000000000000009,
+        "spanning": 0.010000000000000009,
+        "susceptibility": 0.0,
+        "terrynce": 0.24
+      },
+      "estimates": {
+        "giant": 0.49,
+        "spanning": 0.49,
+        "susceptibility": 0.5,
+        "terrynce": 0.74
+      },
+      "family": "square_bond",
+      "known_pc": 0.5,
+      "n": 32
+    },
+    {
+      "absolute_error": {
+        "giant": 0.0,
+        "spanning": 0.010000000000000009,
+        "susceptibility": 0.0,
+        "terrynce": 0.24
+      },
+      "estimates": {
+        "giant": 0.5,
+        "spanning": 0.49,
+        "susceptibility": 0.5,
+        "terrynce": 0.74
+      },
+      "family": "square_bond",
+      "known_pc": 0.5,
+      "n": 48
+    },
+    {
+      "absolute_error": {
+        "giant": 0.0027460507920999966,
+        "spanning": 0.03274605079209991,
+        "susceptibility": 0.0027460507920999966,
+        "terrynce": 0.1272539492079
+      },
+      "estimates": {
+        "giant": 0.59,
+        "spanning": 0.56,
+        "susceptibility": 0.59,
+        "terrynce": 0.72
+      },
+      "family": "square_site",
+      "known_pc": 0.5927460507921,
+      "n": 16
+    },
+    {
+      "absolute_error": {
+        "giant": 0.02725394920790003,
+        "spanning": 0.03274605079209991,
+        "susceptibility": 0.01725394920790002,
+        "terrynce": 0.14725394920790003
+      },
+      "estimates": {
+        "giant": 0.62,
+        "spanning": 0.56,
+        "susceptibility": 0.61,
+        "terrynce": 0.74
+      },
+      "family": "square_site",
+      "known_pc": 0.5927460507921,
+      "n": 24
+    },
+    {
+      "absolute_error": {
+        "giant": 0.01725394920790002,
+        "spanning": 0.012746050792100005,
+        "susceptibility": 0.007253949207900012,
+        "terrynce": 0.1272539492079
+      },
+      "estimates": {
+        "giant": 0.61,
+        "spanning": 0.58,
+        "susceptibility": 0.6,
+        "terrynce": 0.72
+      },
+      "family": "square_site",
+      "known_pc": 0.5927460507921,
+      "n": 32
+    },
+    {
+      "absolute_error": {
+        "giant": 0.007253949207900012,
+        "spanning": 0.012746050792100005,
+        "susceptibility": 0.012746050792100005,
+        "terrynce": 0.10725394920789999
+      },
+      "estimates": {
+        "giant": 0.6,
+        "spanning": 0.58,
+        "susceptibility": 0.58,
+        "terrynce": 0.7
+      },
+      "family": "square_site",
+      "known_pc": 0.5927460507921,
+      "n": 48
+    },
+    {
+      "absolute_error": {
+        "giant": 0.010000000000000009,
+        "spanning": 0.020000000000000018,
+        "susceptibility": 0.020000000000000018,
+        "terrynce": 0.22999999999999998
+      },
+      "estimates": {
+        "giant": 0.49,
+        "spanning": 0.48,
+        "susceptibility": 0.52,
+        "terrynce": 0.73
+      },
+      "family": "triangular_site",
+      "known_pc": 0.5,
+      "n": 16
+    },
+    {
+      "absolute_error": {
+        "giant": 0.010000000000000009,
+        "spanning": 0.030000000000000027,
+        "susceptibility": 0.030000000000000027,
+        "terrynce": 0.13
+      },
+      "estimates": {
+        "giant": 0.49,
+        "spanning": 0.47,
+        "susceptibility": 0.53,
+        "terrynce": 0.63
+      },
+      "family": "triangular_site",
+      "known_pc": 0.5,
+      "n": 24
+    },
+    {
+      "absolute_error": {
+        "giant": 0.0,
+        "spanning": 0.030000000000000027,
+        "susceptibility": 0.0,
+        "terrynce": 0.16000000000000003
+      },
+      "estimates": {
+        "giant": 0.5,
+        "spanning": 0.47,
+        "susceptibility": 0.5,
+        "terrynce": 0.66
+      },
+      "family": "triangular_site",
+      "known_pc": 0.5,
+      "n": 32
+    },
+    {
+      "absolute_error": {
+        "giant": 0.0,
+        "spanning": 0.010000000000000009,
+        "susceptibility": 0.0,
+        "terrynce": 0.22999999999999998
+      },
+      "estimates": {
+        "giant": 0.5,
+        "spanning": 0.49,
+        "susceptibility": 0.5,
+        "terrynce": 0.73
+      },
+      "family": "triangular_site",
+      "known_pc": 0.5,
+      "n": 48
+    }
+  ],
+  "run_config": {
+    "families": [
+      "square_bond",
+      "square_site",
+      "triangular_site"
+    ],
+    "p_grid": [
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75
+    ],
+    "replicas": 32,
+    "seed": 20260831,
+    "sizes": [
+      16,
+      24,
+      32,
+      48
+    ]
+  },
+  "schema": "terrynce.percolation.summary.v1",
+  "terrynce_vs_giant_pearson": 0.9021312768623939
+}
