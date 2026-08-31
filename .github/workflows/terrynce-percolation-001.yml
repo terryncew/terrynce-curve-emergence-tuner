@@ -1,0 +1,35 @@
+name: terrynce-percolation-001
+
+on:
+  pull_request:
+    paths:
+      - 'TERRYNCE-PERCOLATION-001/**'
+      - '.github/workflows/terrynce-percolation-001.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'TERRYNCE-PERCOLATION-001/**'
+      - '.github/workflows/terrynce-percolation-001.yml'
+
+jobs:
+  test-and-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: TERRYNCE-PERCOLATION-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install
+        run: python -m pip install -e '.[dev]'
+      - name: Unit tests
+        run: pytest
+      - name: Re-run frozen confirmatory experiment
+        run: tp001 --output artifacts-ci
+      - name: Verify deterministic summary and receipt
+        run: |
+          cmp artifacts-confirmatory/summary.json artifacts-ci/summary.json
+          cmp artifacts-confirmatory/receipt.json artifacts-ci/receipt.json
